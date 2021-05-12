@@ -1,0 +1,89 @@
+.container {
+  margin: auto;
+  margin-top: 10rem;
+  max-width: 54rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  &__logo {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1rem;
+    line-height: 1;
+  }
+
+  &__theme-switch {
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  &__switch-night,
+  &__switch-day {
+    position: absolute;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+.todo {
+  &__new {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__list {
+    background-color: white;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid black;
+  &__checkbox {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__text {
+  }
+}
+
+.controls {
+  display: grid;
+  grid-template-areas: "items select clear";
+}
+
+.attribution {
+  width: 30rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 50rem;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+.hidden {
+  display: none;
+}

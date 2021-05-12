@@ -1,0 +1,66 @@
+// VARIABLES
+
+$color-gradient-1: hsl(192, 100%, 67%);
+$color-gradient-2: hsl(280, 87%, 65%);
+
+:root {
+  --color-primary-blue: hsl(220, 98%, 61%);
+
+  --gradient-checkbox: linear-gradient(
+    to right bottom,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  // light theme
+
+  --day-very-light-gray: hsl(0, 0%, 98%);
+  --day-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --day-light-grayish-blue: hsl(233, 11%, 84%);
+  --day-dark-grayish-blue: hsl(236, 9%, 61%);
+  --day-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  // dark theme
+
+  --night-very-dark-blue: hsl(235, 21%, 11%);
+  --night-very-dark-desat-blue: hsl(235, 24%, 19%);
+  --night-light-grayish-blue: hsl(234, 39%, 85%);
+  --night-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --night-dark-grayish-blue: hsl(234, 11%, 52%);
+  --night-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --night-very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+}
+
+.theme--light {
+  --image-background-desktop: url(../images/bg-desktop-light.jpg);
+  --image-background-mobile: url(../images/bg-mobile-light.jpg);
+  --color-background: var(--day-very-light-gray);
+}
+.theme--dark {
+  --image-background-desktop: url(../images/bg-desktop-dark.jpg);
+  --image-background-mobile: url(../images/bg-mobile-dark.jpg);
+  --color-background: var(--night-very-dark-blue);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  background-image: var(--image-background-desktop);
+  background-color: var(--color-background);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

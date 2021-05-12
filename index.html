@@ -3,31 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | Todo app</title>
   </head>
-  <body>
-    Todo
-
-    <!-- Add dynamic number -->
-    items left All Active Completed Clear Completed Drag and drop to reorder
-    list
+  <body class="theme--light">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__logo">Todo</h1>
+        <div class="header__theme-switch">
+          <img
+            src="./images/icon-moon.svg"
+            alt="moon icon"
+            class="header__switch-night"
+          />
+          <img
+            src="./images/icon-sun.svg"
+            alt="sun icon"
+            class="header__switch-day hidden"
+          />
+        </div>
+      </header>
+      <div class="todo__new">
+        <div class="item__checkbox"></div>
+        <input
+          type="text"
+          class="todo__input item__text"
+          placeholder="Create a new todo..."
+        />
+      </div>
+      <div class="todo__list">
+        <div class="item">
+          <div class="item__checkbox"></div>
+          <p class="item__text">Jog around the park 3x</p>
+        </div>
+        <div class="item">
+          <div class="item__checkbox"></div>
+          <p class="item__text">Complete online JavaScript course</p>
+        </div>
+        <div class="item">
+          <div class="item__checkbox"></div>
+          <p class="item__text">Read for 1 hour</p>
+        </div>
+        <div class="item">
+          <div class="item__checkbox"></div>
+          <p class="item__text">Pick up groceries</p>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="controls__items-left">5 items left</div>
+        <div class="controls__selectors">
+          <span class="selector__all">All</span>
+          <span class="selector__active">Active</span>
+          <span class="selector__completed">Completed</span>
+        </div>
+        <div class="controls__clear">Clear Completed</div>
+      </div>
+      <div class="text-drag-drop">Drag and drop to reorder list</div>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/paul-cave">Paul Cave</a>.
     </div>
   </body>
 </html>
