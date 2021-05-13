@@ -5,6 +5,7 @@ $color-gradient-2: hsl(280, 87%, 65%);
 
 :root {
   --color-primary-blue: hsl(220, 98%, 61%);
+  --color-white: #fff;
 
   --gradient-checkbox: linear-gradient(
     to right bottom,
@@ -29,17 +30,34 @@ $color-gradient-2: hsl(280, 87%, 65%);
   --night-dark-grayish-blue: hsl(234, 11%, 52%);
   --night-very-dark-grayish-blue: hsl(233, 14%, 35%);
   --night-very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+
+  //others
+
+  --border-radius-main: 0.5rem;
+  --box-shadow-main: 0 1rem 3rem rgba(0, 0, 0, 0.1);
 }
 
 .theme--light {
   --image-background-desktop: url(../images/bg-desktop-light.jpg);
   --image-background-mobile: url(../images/bg-mobile-light.jpg);
   --color-background: var(--day-very-light-gray);
+  --color-theme: var(--color-white);
+  --color-lines: var(--day-very-light-grayish-blue);
+  --color-todo-text: var(--day-very-dark-grayish-blue);
+  --color-todo-completed: var(--day-light-grayish-blue);
+  --color-controls-text: var(--day-dark-grayish-blue);
+  --color-controls-hover: var(--day-very-dark-grayish-blue);
 }
 .theme--dark {
   --image-background-desktop: url(../images/bg-desktop-dark.jpg);
   --image-background-mobile: url(../images/bg-mobile-dark.jpg);
   --color-background: var(--night-very-dark-blue);
+  --color-theme: var(--night-very-dark-desat-blue);
+  --color-lines: var(--night-dark-grayish-blue);
+  --color-todo-text: var(--night-light-grayish-blue);
+  --color-todo-completed: var(--night-very-dark-grayish-blue);
+  --color-controls-text: var(--night-dark-grayish-blue);
+  --color-controls-hover: var(--night-dark-grayish-blue);
 }
 
 *,
@@ -63,4 +81,12 @@ body {
   background-color: var(--color-background);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media only screen and (max-width: 90em) {
+    background-size: auto;
+    background-position: top;
+  }
+  @media only screen and (max-width: 37.5em) {
+    font-size: 1.4rem;
+  }
 }
