@@ -67,10 +67,16 @@
   &__input {
     font-size: inherit;
     font-family: inherit;
+    color: var(--color-todo-text);
     outline: none;
     border: none;
     width: 90%;
     caret-color: var(--color-primary-blue);
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--color-controls-text);
+    }
   }
 
   &__list {
@@ -79,6 +85,7 @@
     box-shadow: var(--box-shadow-main);
     padding-bottom: 4.7rem;
     margin-bottom: -4.7rem;
+    overflow: hidden;
   }
 }
 
@@ -87,9 +94,13 @@
   align-items: center;
   padding: 2rem 2.4rem;
   border-bottom: 1px solid var(--color-lines);
+  background-color: var(--color-theme);
+  width: 54rem;
+  z-index: 3;
 
   @media only screen and (max-width: 37.5em) {
     padding: 1.6rem 2rem;
+    width: unset;
   }
 
   &__checkbox {
@@ -118,7 +129,7 @@
       position: absolute;
       width: 2.2rem;
       height: 2.2rem;
-      background-color: var(--color-white);
+      background-color: var(--color-theme);
       border-radius: 50%;
       top: 0.1rem;
       left: 0.1rem;
@@ -263,4 +274,19 @@
 
 .hidden {
   display: none;
+}
+
+.draggable {
+  user-select: none;
+}
+
+.placeholder {
+  height: 6.5rem;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0.6;
+
+  @media only screen and (max-width: 37.5em) {
+    height: 5.3rem;
+  }
 }
