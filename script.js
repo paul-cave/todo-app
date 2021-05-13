@@ -181,6 +181,7 @@ class App {
   _dragMouseDown(e) {
     // listener is on text, select item to drag
     draggingEl = e.target.closest(".item");
+    draggingEl.classList.add("dragging");
     // calculate mouse position
     const rect = draggingEl.getBoundingClientRect();
     x = e.pageX - rect.left;
@@ -191,6 +192,7 @@ class App {
   }
 
   _dragMouseUp() {
+    draggingEl.classList.remove("dragging");
     // remove placeholder if it exists, deactivate flag
     placeholder && placeholder.remove();
     isDragActive = false;
